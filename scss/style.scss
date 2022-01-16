@@ -11,9 +11,7 @@
 
 
 body {
-    background-image: url('../images/cover.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to right, $olive-color, $olive-color-darker)
 }
 
 a{
@@ -92,8 +90,12 @@ main {
     margin-top: 80px;
     text-align: center;
     color: $olive-color-darker;
+    background-image: url('../images/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
     .olive-text{
-        color: rgb(245, 220, 81);
+        color: rgb(194, 112, 65);
     }
     h1{
         font-size: 5em;
@@ -105,17 +107,18 @@ main {
         border-radius: 10px;
     }
     h3{
-        font-size: 1.5em;
+        font-size: 1.8em;
+
     }
 }
 
 #catalog {
-    width: 80%;
+    width: 60%;
     margin: 100px auto;
 
     h3 {
         display: block;
-        font-size: 2.5em;
+        font-size: 1.8em;
         color: #fff;
         width: 50%;
         margin:  0 auto;
@@ -128,8 +131,9 @@ main {
 
     .column{
         width: 25%;
-        margin: 50px;
+        margin: 20px;
         display: inline-block;
+
 
         img{
             display: block;
@@ -139,7 +143,7 @@ main {
         }
 
         h2{
-            font-size: 1.5em;
+            font-size: 1.4em;
             text-align: center;
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -147,49 +151,153 @@ main {
         }
 
         .button{
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-align: center;
             text-transform: uppercase;
             color:  #fff;
             background-color: none;
             font-weight: bold;
-            padding: 10px 20px;
+            padding: 10px 10px;
             border: 2px #fff solid;
-            // border-radius: 10px;
+            border-radius: 10px;
             cursor: pointer;
             margin: 10px;
-            transition: 0.5s;
+            transition: 1s;
             position: relative;
             overflow: hidden;
             &:hover{
+                font-size: 1.4em;
                 color: $olive-color-darker;
-            //     // background-color: #fff;
-            //     border: #fff;
-            //     font-weight: bold;
-            }
-            &::before{
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 0%;
                 background-color: #fff;
-                z-index: -1;
-                transition: 0.8s;
+                padding: 10px 10px;
             }
             // &::before{
-            //     top: 0;
-            //     border-radius: 0 0 50% 50% ;
-            //     height: 180%;
+            //     content: "";
+            //     position: absolute;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 0%;
+            //     background-color: #fff;
+            //     z-index: -1;
+            //     transition: 0.8s;
             // }
-            &:hover::before{
-                top: 0;
-                height: 100%;
-                border-radius: 0 0 1000px 1000px;
-                color: $olive-color-darker;
-            }
+            // &:hover::before{
+            //     top: 0;
+            //     height: 100%;
+            //     border-radius: 100px 100px 1000px 1000px;
+            //     color: $olive-color-darker;
+            // }
         }
 
     }
 }
+
+.slide-container {
+    
+    margin:  0 ;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // overflow: hidden;
+
+    .image-slider {
+        width: 100%;
+        // position: absolute;
+        display: flex; 
+        margin:  0 auto;
+        transition: .7s;
+        // left: 0;
+        // justify-content: center;
+        // align-items: center;
+
+        .img{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px;
+            transition: .5s;
+            filter: saturate(10%);
+        }
+
+        .button {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transition: .5s;
+            background-color: rgba(0,0,0, 0.4);
+            &:hover{
+                background-color: rgba(0,0,0, 0.2) ;
+            }
+        }
+
+        .slides-div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 ;
+        }
+    }
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~ .image-slider #button-1{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span2:target ~ .image-slider #img2,
+#slider-span2:target ~ .image-slider #button-2{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~ .image-slider #button-3{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span4:target ~ .image-slider #img4,
+#slider-span4:target ~ .image-slider #button-4{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span5:target ~ .image-slider #img5,
+#slider-span5:target ~ .image-slider #button-5{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span6:target ~ .image-slider #img6,
+#slider-span6:target ~ .image-slider #button-6{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-span7:target ~ .image-slider #img7,
+#slider-span7:target ~ .image-slider #button-7{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+// #slider-span1:target ~ .image-slider {left: 70%}
+// #slider-span2:target ~ .image-slider {left: 50%}
+// #slider-span3:target ~ .image-slider {left: 25%}
+
+// #slider-span5:target ~ .image-slider {left: -25%}
+// #slider-span6:target ~ .image-slider {left: -50%}
+// #slider-span7:target ~ .image-slider {left: -70%}
 
