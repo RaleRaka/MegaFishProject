@@ -301,3 +301,14 @@ main {
 // #slider-span6:target ~ .image-slider {left: -50%}
 // #slider-span7:target ~ .image-slider {left: -70%}
 
+footer{
+    background-color: $olive-color-darker;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    .orange{
+        color: rgb(194, 112, 65);
+    }
+}
