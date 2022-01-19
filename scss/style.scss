@@ -20,7 +20,7 @@ a{
 }
 
 aside {
-    width: 200px;
+    width: 250px;
     border-right: 1px solid #ddd;
     background-color: $olive-color;
     position: fixed;
@@ -190,6 +190,87 @@ main {
         }
 
     }
+
+    .about-heading{
+        font-size: 4em;
+    }
+
+    .about-text{
+        font-size: 2em;
+        background-color: $olive-color;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .contact-heading{
+        font-size: 4em;
+
+    }
+
+    .contact-info{
+        background-color: $olive-color;
+        color: #fff;
+        font-size: 2em;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        span{
+            color: $orange-color;
+        }
+    }
+    .login-heading{
+        margin: 10px auto;
+        width: max-content;
+    }
+
+    .login-form{
+        background-color: $olive-color;
+        padding: 10px;
+        border-radius: 10px;
+        width: max-content;
+        height: 16vh;
+        margin: 0 auto;
+        .label{
+            font-size: 2em;
+            color: $orange-color;
+        }
+
+        .form{
+            border-radius: 10px;
+            height: 2em;
+            background-color: $olive-color;
+            border-color: #fff;
+        }
+        .button{
+            font-size: 1.2em;
+            text-align: center;
+            text-transform: uppercase;
+            color:  #fff;
+            background-color: none;
+            font-weight: bold;
+            padding: 10px 10px;
+            border: 2px #fff solid;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 1s;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                font-size: 1.4em;
+                color: $olive-color-darker;
+                background-color: #fff;
+                padding: 10px 10px;
+            }
+        }
+        
+
+
+    }
+
+
 }
 
 .slide-container {
@@ -200,7 +281,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    // overflow: hidden;
+    overflow: hidden;
 
     .image-slider {
         width: 100%;
@@ -208,9 +289,9 @@ main {
         display: flex; 
         margin:  0 auto;
         transition: .7s;
-        // left: 0;
-        // justify-content: center;
-        // align-items: center;
+        left: 0;
+        justify-content: center;
+        align-items: center;
 
         .img{
             width: 200px;
@@ -312,3 +393,4 @@ footer{
         color: rgb(194, 112, 65);
     }
 }
+
